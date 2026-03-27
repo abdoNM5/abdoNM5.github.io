@@ -1,0 +1,27 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 242" width="241" height="242">
+	<title>css-svg</title>
+	<defs>
+		<image  width="26" height="33" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAhAQMAAAD9OSnjAAAAAXNSR0IB2cksfwAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAAAE0lEQVR4nGNgIBPI/z9AIkE+AAAkexKtrg/biQAAAABJRU5ErkJggg=="/>
+		<image  width="29" height="33" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAhBAMAAADXBb3qAAAAAXNSR0IB2cksfwAAACRQTFRFAAAA////////////////////////////////////////////tAmN6QAAAAx0Uk5TAP8CDg0WBDAHBgoTay0rSQAAADpJREFUeJxjYBREAgIMDIODr6RsbGxibGwA4zPAAYQflgYGCYPFvQg+DODis3fO7Ojs6Fg9WNyLxgcA6JYiBQKfQi8AAAAASUVORK5CYII="/>
+		<image  width="49" height="33" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAhBAMAAACCZF60AAAAAXNSR0IB2cksfwAAACpQTFRFAAAA////////////////////////////////////////////////////hrvKLwAAAA50Uk5TAP8PCwwOBQcIThMNAB276JKMAAAAO0lEQVR4nGNggANBZMCADIaljJAxCJiYYsoIMGABYBmxig4wGIz+oYMMFDCSIjNrFRCs9rk4GP1DUxkAkVcjojLhxMQAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #264de4 } 
+		.s1 { fill: #2965f1 } 
+		.s2 { fill: #ebebeb } 
+		.s3 { fill: #ffffff } 
+	</style>
+	<g id="layer1">
+		<g id="g3013">
+			<path id="polygon2989" class="s0" d="m51.6 221.7l-15.5-173.5h170l-15.5 173.5-69.6 19.3z"/>
+			<path id="polygon2991" class="s1" d="m121.1 226.2v-163.8h69.5l-13.2 148.2z"/>
+			<path id="polygon2993" class="s2" d="m121.1 126.7v21.3h-47.6l-1.9-21.3z"/>
+			<path id="polygon2995" class="s2" d="m67.7 83.6h53.3 0.1v21.3h-51.4z"/>
+			<path id="polygon2997" class="s2" d="m77.4 192.1l-3-33.4h9.9 11.5l1.5 16.9 23.7 6.4h0.1v22.2h-0.1z"/>
+			<use id="path2999" href="#img1" x="76" y="1"/>
+			<use id="path3001" href="#img2" x="106" y="1"/>
+			<use id="path3003" href="#img3" x="118" y="1"/>
+			<path id="polygon3005" class="s3" d="m170.5 126.7l-0.5 5.7-5 56.1-0.3 3.6-43.7 12.1v-22.2l23.8-6.4 2.4-27.6h-26.2v-21.3h28.1l1.9-21.8h-30v-21.3h53.4z"/>
+		</g>
+	</g>
+</svg>

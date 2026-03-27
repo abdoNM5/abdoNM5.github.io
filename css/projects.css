@@ -1,0 +1,120 @@
+.projects{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    position: relative;
+}
+
+.pr-tit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.pr-tit h2{
+    padding:0rem 1.875rem;
+    font-size:3rem;
+    letter-spacing:-3px;
+    color: #f4f6fccc; 
+}
+
+.pr-tit h2 span{display:inline-block;transition:all .6s ease-in-out;}
+
+.pr-tit h2 span:hover{animation:animate .6s;color:#6CBAFA;}
+
+.all-projects{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.image{position:relative;width:25rem;margin:1.25rem;height:14.063rem;}
+
+.see-more{display:none;margin:4.375rem 0rem;}
+
+.see-more a{
+    text-decoration:none;
+    color:#6CBAFA;
+    border:1px solid #6CBAFA;
+    padding:5px;
+    transition:0.3s ease-in-out;
+}
+
+.see-more a:hover{
+    background:#6CBAFA;
+    color:#181818d9;
+    transition:0.3s ease-in-out;
+}
+
+.img{display:block;width:100%;border-radius:1.25rem;height:100%;border:1px solid #6CBAFA;}
+
+.image-content{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#181818d9;
+    color:#f4f6fccc;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    opacity:0;
+    transition:opacity 0.25s;
+    border-radius:1.25rem;
+    border: 1px solid #6CBAFA;
+}
+
+.image-content h3{font-size:1.5rem;}
+
+.image-content p{
+    padding:0 1rem;
+    text-align:center;
+}
+
+.image-content a{
+    border:1px solid #6CBAFA;
+    padding:7px;
+    cursor:pointer;
+    text-decoration:none;
+    color:#6CBAFA;
+    font-size:1rem;
+    font-weight:500;
+    transition:0.3s ease;
+    outline: none;
+}
+
+.image-content a:hover{
+    background:#6CBAFA;
+    color:#181818d9;
+    transition:0.3s ease;
+    box-shadow: inset 10.625rem 0 #6CBAFA;
+}
+
+.image-content-blur{backdrop-filter:blur(5px);}
+
+.image-content-primary{background:#009578;}
+
+.image-content>*{transform:translateY(1.25rem);transition:transform 0.25s;}
+
+.image:hover .image-content{opacity:1;}
+
+.image:hover .image-content>*{transform:translateY(0rem);}
+
+.see-less{display:none;margin:4.375rem 0rem;}
+
+.see-less a{
+    text-decoration:none;
+    color:#6CBAFA;
+    border:1px solid #6CBAFA;
+    padding:5px;
+    transition:0.3s ease-in-out;
+}
+
+.see-less a:hover{
+    background:#6CBAFA;
+    color:#181818d9;
+    transition:0.3s ease-in-out;
+}

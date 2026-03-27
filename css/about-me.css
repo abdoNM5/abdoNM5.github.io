@@ -1,0 +1,68 @@
+
+.about-me{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+}
+
+.ab-tit{display:flex;justify-content:center;align-items:center;}
+
+.hr {
+    width:27%;
+    color:#f3f3f3cc;
+    height:2px;
+    background:#f3f3f3cc;
+}
+
+.ab-tit h2{
+    padding:0rem 1.875rem; 
+    font-size:3rem;
+    letter-spacing:-3px;
+    color:#f4f6fccc;
+}
+
+.ab-tit h2 span{display:inline-block;transition:all .6s ease-in-out;}
+
+.ab-tit h2 span:hover{animation:animate .6s;color:#6CBAFA;}
+
+.abt{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:34.375rem;
+}
+
+.abt-img{width:33.125rem;}
+
+.abt-img img{width:28.125rem;border-radius:50%;height:28.125rem;}
+
+.abt-txt p{
+    width: 34.688rem;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#f4f6fccc;
+    font-family:'Montserrat',sans-serif;
+}
+
+.abt-txt h3{
+    color:#f4f6fccc;
+    font-size:1.3rem;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.abt-txt h3 hr{
+    width:27%;
+    margin:0rem 0.313rem;
+    height:1px;
+    background:#f4f6fccc;
+}
+
+.s-t{display:flex;justify-content:space-evenly;flex-wrap:wrap;align-items:center;}
+
+.s-t .st{width:3.125rem;margin:0.938rem 0.313rem;}

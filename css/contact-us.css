@@ -1,0 +1,86 @@
+.Contact-Me{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    position:relative;
+}
+
+.ct-talk{
+    width:100%;
+    text-align:center;
+    height:9.375rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.ct-talk h2{
+    padding:0rem 1.875rem;
+    font-size:3rem;
+    font-family:'Montserrat',sans-serif;
+    color:#F4F6FC;
+    letter-spacing:-3px;
+}
+
+.ct-talk h2 span{display:inline-block;transition:all .6s ease-in-out;}
+
+.ct-talk h2 span:hover{animation: animate .6s;color: #6CBAFA;}
+
+.frm{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.yrnm,.yrem,.yrmsg,.sbnt{padding:1.25rem;padding-bottom:1.25rem;}
+
+.yrnm input,.yrem input,.yrmsg textarea{
+    margin-bottom: 0.3rem;
+    width:27.5rem;
+    border-radius:0.313rem;
+    outline:none;
+    border:none;
+    padding:0.938rem;
+    cursor:auto;
+    background:#F4F6FC;
+    border-left:0.313rem solid #6CBAFA;
+    transition:.3s ease;
+}
+.yrnm input,.yrem input{height:3.125rem;}
+
+#vname,#vemail,#vtext{
+    color:#ff6565d1;
+    font-size:0.9rem;
+}
+
+.yrnm input:focus,.yrem input:focus,.yrmsg textarea:focus{
+    transition:.3s ease;
+    box-shadow:0rem 0rem 0.938rem #6CBAFA;
+}
+
+.yrmsg textarea{height:190px;resize:none;}
+
+.sbnt input{
+    background:transparent;
+    outline:none;
+    border:none;
+    height:2.813rem;
+    width:10.625rem;
+    color:#6cbafa;
+    border:1px solid #6CBAFA;
+    cursor:pointer;
+    transition:.3s ease;
+    font-weight:600;
+    font-size:1rem;
+}
+
+.sbnt input:hover{
+    border-width:1px;
+    color:#181818;
+    transition:.3s ease;
+    box-shadow:inset 10.625rem 0 #6CBAFA;
+}

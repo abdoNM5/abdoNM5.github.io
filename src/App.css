@@ -1,0 +1,36 @@
+﻿/* App Component Styles */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+::selection {
+  background: #FF6B00;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #FF6B00;
+  color: #FFFFFF;
+}
