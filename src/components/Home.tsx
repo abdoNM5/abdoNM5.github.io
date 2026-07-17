@@ -68,43 +68,6 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      <section id="home" className="home">
-        <div className="home-container">
-          <div className="hero-panel" data-aos="fade-up">
-            <p className="eyebrow">Data Engineer Student Portfolio</p>
-            <h1 className="hero-title">
-              Building data systems that turn raw information into clear decisions.
-            </h1>
-            <p className="hero-description">
-              I design pipeline-first products: robust ingestion, clean modeling, and dashboards that teams can trust.
-            </p>
-            <div className="cta-buttons">
-              <a href="#contact" className="cta-button">Start Conversation</a>
-              <Link to="/projects" className="cta-button secondary">Open Project Lab</Link>
-            </div>
-          </div>
-
-          <div className="hero-side" data-aos="zoom-in">
-            <div className="hero-badge">Abdelkader Anmira</div>
-            <h2 className="hero-role">Data Engineer & Analyst</h2>
-            <div className="metric-list">
-              <div className="metric-card">
-                <strong>8+</strong>
-                <span>Core Technologies</span>
-              </div>
-              <div className="metric-card">
-                <strong>9</strong>
-                <span>Portfolio Projects</span>
-              </div>
-              <div className="metric-card">
-                <strong>100%</strong>
-                <span>Learning Driven</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Contact />
 
       <About />
