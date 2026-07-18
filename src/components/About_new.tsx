@@ -18,7 +18,7 @@ export const About: React.FC = () => {
     {
       name: 'Data Analysis & BI',
       icon: <IconChartDots size={24} stroke={1.5} />,
-      skills: ['Power BI', 'Advanced SQL', 'DAX', 'Power Query', 'Excel', 'Root Cause Analysis'],
+      skills: ['Advanced Power BI', 'Advanced SQL', 'DAX', 'Power Query', 'Excel', 'Data Modeling'],
       color: '#FF6B00'
     },
     {

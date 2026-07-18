@@ -1,4 +1,4 @@
-﻿/* ========================================
+/* ========================================
    GLOBAL STYLES - Noir Ember System
    Palette: #0D0D0D #FF6B00 #FFFFFF #E5E5E5
    ======================================== */
@@ -55,7 +55,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 13px; /* scaled down from 16px — looks correct at 100% browser zoom */
 }
 
 body {

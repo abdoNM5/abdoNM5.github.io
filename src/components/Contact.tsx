@@ -75,63 +75,53 @@ export const Contact: React.FC = () => {
         <div className="hr"></div>
       </div>
 
+      {/* 2-column grid: left col (photo + links) | right col (form) */}
       <div className="contact-grid" data-aos="fade-up">
-        <article className="contact-visual-card">
-          <img
-            src="/media/images/profile.png"
-            alt="Abdelkader Anmira"
-            className="contact-hero-image"
-          />
-          <div className="visual-overlay">
-            <p className="eyebrow">Need a data partner?</p>
-            <h3>Abdelkader Anmira</h3>
-            <p className="profile-role">Data Engineering • Analytics • AI</p>
-            <div className="location-chip">
-              <span>Based in</span>
-              <strong>Marrakech, Morocco</strong>
+
+        {/* ── LEFT COLUMN ── */}
+        <div className="contact-left-col">
+
+          {/* Tall photo card */}
+          <article className="contact-visual-card">
+            <img
+              src="/media/images/profile3.png"
+              alt="Abdelkader Anmira"
+              className="contact-hero-image"
+            />
+            <div className="visual-overlay">
+              <p className="eyebrow">Need a data partner?</p>
+              <h3>Abdelkader Anmira</h3>
+              <p className="profile-role">Data Engineering • Analytics • AI</p>
+              <div className="location-chip">
+                <span>Based in</span>
+                <strong>Marrakech, Morocco</strong>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <aside className="quick-links-card">
-          <p className="eyebrow">Quick Links</p>
-          <div className="contact-link">
-            <FaEnvelope className="contact-icon" />
-            <a href="mailto:nmiraabdellader@gmail.com" className="link-text">
-              nmiraabdellader@gmail.com
+          {/* Icon-only social row — no card, no labels */}
+          <div className="social-icon-row">
+            <a href="mailto:nmiraabdellader@gmail.com" className="social-icon-btn" title="Email">
+              <FaEnvelope />
+            </a>
+            <a href="https://www.linkedin.com/in/abdelkader-anmira4" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="LinkedIn">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/abdoNM5" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="GitHub">
+              <FaGithub />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="https://wa.me/212651191581" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="WhatsApp">
+              <FaWhatsapp />
             </a>
           </div>
-          <div className="contact-link">
-            <FaLinkedin className="contact-icon" />
-            <a
-              href="https://www.linkedin.com/in/abdelkader-anmira4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-text"
-            >
-              LinkedIn Profile
-            </a>
-          </div>
-          <div className="contact-link">
-            <FaGithub className="contact-icon" />
-            <a href="https://github.com/abdoNM5" target="_blank" rel="noopener noreferrer" className="link-text">
-              GitHub Repository
-            </a>
-          </div>
-          <div className="contact-link">
-            <FaInstagram className="contact-icon" />
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="link-text">
-              Instagram
-            </a>
-          </div>
-          <div className="contact-link">
-            <FaWhatsapp className="contact-icon" />
-            <a href="https://wa.me/212651191581" target="_blank" rel="noopener noreferrer" className="link-text">
-              Contact via WhatsApp
-            </a>
-          </div>
-        </aside>
 
+        </div>
+        {/* ── END LEFT COLUMN ── */}
+
+        {/* ── RIGHT COLUMN: Full-height contact form ── */}
         <div className="contact-form-box">
           <div className="form-header">
             <p className="eyebrow">CONTACT ME VIA MESSAGE</p>
@@ -210,6 +200,8 @@ export const Contact: React.FC = () => {
             <div className="error-message">⚠ {errorMessage}</div>
           )}
         </div>
+        {/* ── END RIGHT COLUMN ── */}
+
       </div>
     </section>
   );

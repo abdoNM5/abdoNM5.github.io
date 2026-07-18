@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../styles/header.css';
 
@@ -59,6 +59,16 @@ export const Header: React.FC = () => {
             <FaEnvelope />
           </a>
         </div>
+        <a
+          href="/media/pdfs/cv_data_eng_bi_anmira_v6.pdf"
+          download="Abdelkader_Anmira_CV.pdf"
+          className="nav-cv-btn"
+          title="Download CV"
+          aria-label="Download CV"
+        >
+          <FaDownload />
+          <span>CV</span>
+        </a>
         <a href="/#contact" className="nav-cta">Get In Touch</a>
       </div>
     </header>

@@ -11,35 +11,6 @@ export const Home: React.FC = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const skills = [
-    { name: 'Python', icon: '🐍' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'Apache Spark', icon: '⚡' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'React', icon: '⚛️' },
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'Git', icon: '🔧' },
-  ];
-
-  const workflow = [
-    {
-      step: '01',
-      title: 'Understand the Problem',
-      text: 'Map business goals first, then define the data contract and quality checks.',
-    },
-    {
-      step: '02',
-      title: 'Build Reliable Pipelines',
-      text: 'Design ingestion and transformation paths that stay fast, observable, and stable.',
-    },
-    {
-      step: '03',
-      title: 'Ship Actionable Insight',
-      text: 'Deliver dashboards and models that answer clear questions for real decisions.',
-    },
-  ];
-
   const featuredProjects = [
     {
       title: 'Data Pipeline Dashboard',
@@ -97,33 +68,6 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="education-preview">
-        <div className="section-title" data-aos="fade-up">
-          <div className="hr"></div>
-          <h2>Education & Experience</h2>
-          <div className="hr"></div>
-        </div>
-        <div className="education-preview-card" data-aos="fade-up">
-          <p>
-            Dive into my academic timeline, internships, and certifications—all organized with milestones, highlights, and verified credentials.
-          </p>
-          <div className="education-preview-meta">
-            <div>
-              <strong>3+</strong>
-              <span>Education stops</span>
-            </div>
-            <div>
-              <strong>1</strong>
-              <span>Experience track</span>
-            </div>
-            <div>
-              <strong>3</strong>
-              <span>Certifications</span>
-            </div>
-          </div>
-          <Link to="/education" className="cta-button">Open Education Journey</Link>
-        </div>
-      </section>
 
       <section className="signal-strip" aria-label="core focus areas">
         <div className="signal-track" data-aos="fade-up">
