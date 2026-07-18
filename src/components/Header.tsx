@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
           </a>
         </div>
         <a
-          href="/media/pdfs/cv_data_eng_bi_anmira_v6.pdf"
+          href="/media/pdfs/CV_Anmira_DataEngineer_BI_v6.pdf"
           download="Abdelkader_Anmira_CV.pdf"
           className="nav-cv-btn"
           title="Download CV"
