@@ -87,12 +87,12 @@ const EXPERIENCE_TIMELINE: TimelineItem[] = [
 const CERTIFICATIONS: CertificationItem[] = [
   {
     id: 1,
-    title: 'Advanced SQL (Intermediate/Advanced)',
-    provider: 'HackerRank',
-    year: '2024',
-    summary: 'Passed the Advanced SQL challenge covering window functions, analytics, and performance tuning scenarios.',
-    credentialId: 'HackerRank ADV-SQL',
-    link: '/media/pdfs/hackerrank.pdf',
+    title: 'Oracle Cloud Infrastructure 2025 Certified Developer Professional',
+    provider: 'Oracle',
+    year: '2025',
+    summary: 'Demonstrated expertise in developing, securing, testing, and operating OCI-native applications.',
+    credentialId: 'Oracle OCI-2025',
+    link: '/media/pdfs/Oracle Cloud Infrastructure 2025 Certified Developer Professional.pdf',
   },
   {
     id: 2,
@@ -129,7 +129,7 @@ export const Education: React.FC = () => {
     <div className="education-page">
       <section className="education-hero">
         <div className="education-hero-content" data-aos="fade-up">
-          <p className="education-kicker">Education • Experience • Cetrifications</p>
+          <p className="education-kicker">Education • Experience • Certifications</p>
           <h1>Learning Sprints That Ship Real Outcomes</h1>
           <p>
             Every chapter builds toward reliable data products: foundational academics, real-world internships, and verifiable

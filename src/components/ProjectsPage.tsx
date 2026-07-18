@@ -20,15 +20,68 @@ interface ProjectItem {
   videos?: string[];
   mediaItems?: ProjectMediaItem[];
   githubUrl: string;
-  category: 'Pipelines' | 'Analytics' | 'Cloud' | 'ML' | 'Tooling' | 'Software';
+  categories: ProjectCategory[];
   date: string;
-  profile: 'DATA ENG' | 'SOFTWARE ENG' | 'DATA ANALYSIS';
+  profile: 'DATA ENG' | 'SOFTWARE ENG' | 'DATA ANALYSIS' | 'DATA ENGINEERING & ML';
 }
 
-const FILTERS = ['All', 'Software', 'Pipelines', 'Analytics', 'Cloud', 'ML', 'Tooling'] as const;
+const FILTERS = ['All', 'SOFTWARE', 'Data Engineering', 'BI', 'Cloud', 'AI/ML'] as const;
 type FilterLabel = (typeof FILTERS)[number];
+type ProjectCategory = Exclude<FilterLabel, 'All'>;
 
 const PROJECTS: ProjectItem[] = [
+  {
+    id: 14,
+    title: 'TaaSim - Transport Automation Platform (Big Data)',
+    description: 'Kappa architecture Big Data platform automating taxi dispatches in Casablanca. Features real-time Flink matching, Kafka streaming, and Spark ML demand forecasting.',
+    image: '/media/images/Taasim1.png',
+    link: '#',
+    tags: ['Kafka', 'Flink', 'Spark', 'Cassandra', 'MinIO', 'FastAPI', 'Machine Learning', 'Big Data', 'Kappa Architecture'],
+    images: ['/media/images/Taasim1.png', '/media/images/Taasim2.jpeg', '/media/images/Taasim3.jpeg', '/media/images/Taasim4.jpeg'],
+    githubUrl: 'https://github.com/abdoNM5/Taasim_Data_engineering',
+    categories: ['Data Engineering', 'AI/ML'],
+    date: '2026-07',
+    profile: 'DATA ENG',
+  },
+  {
+    id: 13,
+    title: 'E-Commerce Real-Time Data Pipeline',
+    description: 'Production-grade, end-to-end data engineering pipeline streaming live e-commerce events via REST API to an interactive Power BI dashboard.',
+    image: '/media/images/dbt1.png',
+    link: '#',
+    tags: ['Kafka', 'Airflow', 'Snowflake', 'dbt', 'Power BI', 'Python', 'Docker'],
+    images: ['/media/images/dbt1.png', '/media/images/dbt2.png', '/media/images/dbt3.png'],
+    githubUrl: 'https://github.com/abdoNM5/realtime-ecommerce-pipeline',
+    categories: ['Data Engineering', 'BI'],
+    date: '2026-06',
+    profile: 'DATA ENG',
+  },
+  {
+    id: 12,
+    title: 'Spring Boot NLP Text Annotation Platform',
+    description: 'Comprehensive Java Spring Boot web application for manually annotating text data to train NLP deep learning models, featuring Docker and CI/CD.',
+    image: '/media/images/springPrj.png',
+    link: '#',
+    tags: ['Java 17', 'Spring Boot', 'Spring Security', 'NLP', 'Docker', 'CI/CD', 'MySQL'],
+    videoUrl: '/media/videos/springPrj.mp4',
+    githubUrl: 'https://github.com/abdoNM5/prjSpring',
+    categories: ['SOFTWARE', 'AI/ML'],
+    date: '2026-06',
+    profile: 'SOFTWARE ENG',
+  },
+  {
+    id: 11,
+    title: 'Data Talent Intelligence Platform',
+    description: 'End-to-end data pipeline & NLP recommender for data-related jobs. Features Airflow-orchestrated ETL, skill extraction models, FastAPI backend, and a Next.js frontend to aggregate, normalize, and recommend job postings.',
+    image: '/media/images/jobPulse3.png',
+    link: '#',
+    tags: ['fastApi', 'Airflow', 'ETL', 'NLP', 'Selenium', 'Next.js', 'SQL', 'Power BI', 'DAX measures', 'Data Modeling', 'Power Query'],
+    images: ['/media/images/jobPulse3.png', '/media/images/jobPulse.png', '/media/images/jobPulse2.png', '/media/images/jobPulse4.png', '/media/images/jobPulse5.png'],
+    githubUrl: 'https://github.com/abdoNM5/Job-Intelligence',
+    categories: ['Data Engineering', 'AI/ML', 'BI', 'SOFTWARE'],
+    date: '2026-04',
+    profile: 'DATA ENGINEERING & ML',
+  },
   {
     id: 7,
     title: 'SBA Risk & Economic ROI Dashboard',
@@ -36,9 +89,9 @@ const PROJECTS: ProjectItem[] = [
     image: '/media/images/usba1.jpeg',
     link: '#',
     tags: ['Apache Spark', 'Python', 'PySpark', 'Jupyter', 'Pandas', 'Power BI', 'Hadoop', 'Star Schema', 'ETL', 'Forensic Analytics'],
-    images: ['/media/images/usba4.jpeg','/media/images/usba1.jpeg', '/media/images/usba2.jpeg', '/media/images/usba3.jpeg'],
+    images: ['/media/images/usba4.jpeg', '/media/images/usba1.jpeg', '/media/images/usba2.jpeg', '/media/images/usba3.jpeg'],
     githubUrl: 'https://github.com/abdoNM5/USBA-BANKING',
-    category: 'Analytics',
+    categories: ['Data Engineering', 'BI'],
     date: '2026-02',
     profile: 'DATA ANALYSIS',
   },
@@ -51,7 +104,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['Power BI', 'Power Query', 'DAX', 'Risk Scoring', 'Survival Analysis', 'Hypothesis Testing', 'HR Analytics', 'Predictive Modeling', 'Data Storytelling'],
     images: ['/media/images/HR_PROBLEM.jpeg', '/media/images/HR_PROB2.jpeg', '/media/images/HR_PROB3.jpeg', '/media/images/HR_PROB4.jpeg', '/media/images/HR_prob5.jpeg'],
     githubUrl: 'https://github.com/abdoNM5/HR_PROBLEM',
-    category: 'Analytics',
+    categories: ['BI'],
     date: '2026-02',
     profile: 'DATA ANALYSIS',
   },
@@ -64,7 +117,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['Power BI', 'Power Query', 'DAX', 'Star Schema', 'Dimensional Modeling', 'SUMX', 'Financial Analytics', 'JSON Theme Customization', 'Data Storytelling'],
     images: ['/media/images/cisco1.jpeg', '/media/images/cisco2.jpeg', '/media/images/cisco3.jpeg'],
     githubUrl: 'https://github.com/abdoNM5/DELAYED_CASH',
-    category: 'Analytics',
+    categories: ['BI'],
     date: '2026-03',
     profile: 'DATA ANALYSIS',
   },
@@ -77,7 +130,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['Power BI', 'Power Query', 'DAX', 'Root Cause Analysis', 'MECE Framework', 'Forensic Analytics', 'Operational Intelligence', 'Star Schema'],
     images: ['/media/images/olist1.jpeg', '/media/images/olist2.jpeg', '/media/images/olist3.jpeg'],
     githubUrl: 'https://github.com/abdoNM5/LOW_RATING_PROBLEM',
-    category: 'Analytics',
+    categories: ['BI'],
     date: '2026-03',
     profile: 'DATA ANALYSIS',
   },
@@ -94,7 +147,7 @@ const PROJECTS: ProjectItem[] = [
       { type: 'image', src: '/media/images/forcast2.jpeg' },
     ],
     githubUrl: 'https://github.com/abdoNM5/forcasting',
-    category: 'ML',
+    categories: ['AI/ML', 'Data Engineering'],
     date: '2025-12',
     profile: 'DATA ENG',
   },
@@ -107,7 +160,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['Apache Airflow', 'Python', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'Power BI'],
     images: ['/media/images/AVIATION.png', '/media/images/aviation2.jpeg', '/media/images/aviation3.jpeg'],
     githubUrl: 'https://github.com/abdoNM5/aviation_stack',
-    category: 'Pipelines',
+    categories: ['Data Engineering', 'BI'],
     date: '2026-01',
     profile: 'DATA ENG',
   },
@@ -120,7 +173,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['Roboflow', 'PyTorch', 'SigLIP', 'ByteTrack', 'OpenCV', 'Supervision', 'scikit-learn', 'NumPy'],
     videos: ['/media/videos/ai1.mp4', '/media/videos/ai2.mp4'],
     githubUrl: 'https://github.com/abdoNM5/match_detector',
-    category: 'ML',
+    categories: ['AI/ML', 'SOFTWARE'],
     date: '2025-10',
     profile: 'DATA ANALYSIS',
   },
@@ -130,10 +183,10 @@ const PROJECTS: ProjectItem[] = [
     description: 'AI-powered workforce management solution featuring face recognition attendance system using OpenCV, LLM-powered chatbot built with LangChain and Groq for intelligent data queries, HR employee management interface, and interactive analytics dashboard with real-time attendance tracking and department insights.',
     image: '/media/images/rh_manager.jpeg',
     link: '#',
-    tags: ['React', 'FastAPI', 'LangChain', 'OpenCV', 'DOCKER', 'MySQL', 'TypeScript','DeepFace'],
+    tags: ['React', 'FastAPI', 'LangChain', 'OpenCV', 'DOCKER', 'MySQL', 'TypeScript', 'DeepFace'],
     videoUrl: '/media/videos/rh_manager.mp4',
     githubUrl: 'https://github.com/abdoNM5/rh_manager',
-    category: 'ML',
+    categories: ['SOFTWARE', 'AI/ML'],
     date: '2025-08',
     profile: 'SOFTWARE ENG',
   },
@@ -146,7 +199,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['FastAPI', 'CrewAI', 'DOCKER', 'Selenium', 'Oracle DB', 'Google OAuth'],
     images: ['/media/images/ai_agent1.jpg', '/media/images/ai_agent2.jpg', '/media/images/ai_agent3.jpg', '/media/images/ai_agent4.jpg', '/media/images/ai_agent5.jpg', '/media/images/ai_agent6.jpg'],
     githubUrl: 'https://github.com/abdoNM5/smartHome',
-    category: 'Software',
+    categories: ['SOFTWARE', 'AI/ML'],
     date: '2025-05',
     profile: 'SOFTWARE ENG',
   },
@@ -159,7 +212,7 @@ const PROJECTS: ProjectItem[] = [
     tags: ['PyQt5', 'Python', 'Pandas', 'NumPy', 'Data Visualization'],
     videoUrl: '/media/videos/hospital.mp4',
     githubUrl: 'https://github.com/abdoNM5/hospital-application',
-    category: 'Software',
+    categories: ['SOFTWARE'],
     date: '2024-02',
     profile: 'SOFTWARE ENG',
   },
@@ -188,7 +241,7 @@ export const ProjectsPage: React.FC = () => {
       return PROJECTS;
     }
 
-    return PROJECTS.filter((project) => project.category === activeFilter);
+    return PROJECTS.filter((project) => project.categories.includes(activeFilter as ProjectCategory));
   }, [activeFilter]);
 
   const profileTrackCount = new Set(PROJECTS.map((project) => project.profile)).size;
@@ -268,6 +321,179 @@ export const ProjectsPage: React.FC = () => {
   };
 
   const getProjectDescription = (projectId: number) => {
+    if (projectId === 14) {
+      return {
+        title: 'TaaSim - Transport Automation Platform (Big Data)',
+        sections: [
+          {
+            title: '💰 Problem',
+            content: 'In Casablanca, residents lose time searching for taxis, while taxis waste time randomly searching for passengers. A centralized system was needed to match supply and demand in real-time, analyze network performance, and predict short-term demand.'
+          },
+          {
+            title: '💡 Solution',
+            content: 'Engineered a comprehensive Big Data platform using a Kappa Architecture. It centralizes driver offers and customer demands, performs real-time trip matching (~1.2s), and utilizes Machine Learning to predict future demand across city zones.'
+          },
+          {
+            title: '🔄 Real-Time Streaming & Processing (Kafka & Flink)',
+            items: [
+              'Kafka (KRaft mode) acts as the unified event log for raw GPS and trip requests',
+              'S3 Sink Connector automatically archives raw streams to MinIO data lake',
+              'Flink Job 1 (GPS Normalizer): Cleanses coordinates, handles 3-min late data, and anonymizes positions',
+              'Flink Job 2 (Demand Aggregator): Aggregates supply/demand ratios in 30s windows',
+              'Flink Job 3 (Trip Matcher): Uses RocksDB state to match passengers with available taxis in ~1.2s, with radius expansion'
+            ]
+          },
+          {
+            title: '🧠 Batch Processing & ML (Spark)',
+            items: [
+              'PySpark ETL pipelines process MinIO archives, using Uber\'s H3 system for geospatial indexing',
+              'Spark MLLib trains a GBTRegressor model using engineered time and weather features (Open Meteo API)',
+              'ML Model outperforms the 7-day naive baseline and serves demand forecasts in ~120ms'
+            ]
+          },
+          {
+            title: '🗄️ Storage & APIs',
+            items: [
+              'Data Lake (MinIO) handles raw, curated, and ML archives',
+              'Serving Layer (Cassandra) enables sub-millisecond NoSQL reads/writes for vehicle_positions and trips',
+              'Containerized FastAPI backend provides modular, JWT-secured endpoints for matching, ML inference, and role-based access'
+            ]
+          },
+          {
+            title: '⚡ Performance & SLAs',
+            items: [
+              'Real-Time Matching: ~1.2 seconds',
+              'ML Prediction via API: ~120 milliseconds',
+              'Batch Processing: ~2m 14s',
+              'Fault Tolerance: Fast recovery in ~12 seconds without data loss'
+            ]
+          },
+          {
+            title: '⚙️ Tech Stack',
+            content: 'Apache Kafka • Apache Flink • Apache Spark (MLLib) • Cassandra • MinIO • FastAPI • Docker • RocksDB • Uber H3'
+          }
+        ]
+      };
+    }
+
+    if (projectId === 13) {
+      return {
+        title: 'E-Commerce Real-Time Data Pipeline',
+        sections: [
+          {
+            title: '💰 Problem',
+            content: 'E-commerce platforms need near real-time insights to track revenue, customer churn, and product performance. Batch processing is often too slow to act on live transactions and customer behaviors.'
+          },
+          {
+            title: '💡 Solution',
+            content: 'Architected an end-to-end streaming data pipeline that fetches live events from a REST API, buffers them in Apache Kafka, and uses Apache Airflow to coordinate ingestion into Snowflake. Data is then transformed with dbt into a robust Star Schema to power a live Power BI dashboard.'
+          },
+          {
+            title: '🏗️ Architecture & Data Modeling',
+            items: [
+              'Airflow Producer DAGs fetch live data (users, products, categories, orders) and publish JSON to Kafka topics',
+              'Consumer DAGs read from Kafka and upsert records into Snowflake RAW schema using MERGE INTO',
+              'dbt models transform raw data into cleaned, deduplicated DIM_* and FCT_* tables in the ANALYTICS schema',
+              'Star Schema modeling ensures optimized querying for the BI layer'
+            ]
+          },
+          {
+            title: '📊 Analytics & Power BI',
+            items: [
+              'Direct connection to Snowflake ANALYTICS schema to render real-time visualizations',
+              'Built advanced DAX measures for Average Order Value, Active Purchasers, Customer Lifetime Value, and 60-day Churn Warning',
+              'Visualizes live KPIs, VIP Customer Leaderboards, and Customer Loyalty Funnels'
+            ]
+          },
+          {
+            title: '⚙️ Tech Stack',
+            content: 'Apache Airflow • Apache Kafka • Zookeeper • Snowflake • dbt (data build tool) • Python • Docker • Power BI • DAX'
+          }
+        ]
+      };
+    }
+
+    if (projectId === 12) {
+      return {
+        title: 'Spring Boot NLP Text Annotation Platform',
+        sections: [
+          {
+            title: '💰 Problem',
+            content: 'Training NLP models requires high-quality, human-annotated data. Existing tools lacked seamless integration between the manual labeling process (human-in-the-loop) and automated deep learning training pipelines.'
+          },
+          {
+            title: '💡 Solution',
+            content: 'Built a full-fledged enterprise labeling platform that orchestrates text tasks. It distributes datasets to annotators, ensures quality via inter-annotator agreement metrics, and directly triggers NLP model training through isolated Python processes.'
+          },
+          {
+            title: '👑 Admin & Annotator Roles',
+            items: [
+              'Admin: Manages datasets, orchestrates task distribution (minimum 3 annotators per text), monitors spam, and launches AI training',
+              'Annotator: Logs in via JWT, executes labeling tasks (Similarity, NLI, Sentiment Analysis), and tracks personal annotation speed/metrics'
+            ]
+          },
+          {
+            title: '🏗️ Architecture & DevOps',
+            items: [
+              'Microservices-ready architecture using Java 17 and Spring Boot',
+              'Python integration for heavy ML computations (Transformers & scikit-learn)',
+              'Fully configured GitHub Actions CI/CD pipeline for automated testing and deployment',
+              'Dockerized for consistent deployments across any environment'
+            ]
+          },
+          {
+            title: '⚙️ Tech Stack',
+            content: 'Java 17 • Spring Boot • Spring Security (JWT) • MySQL • Docker • GitHub Actions (CI/CD) • Python • Transformers • scikit-learn'
+          }
+        ]
+      };
+    }
+
+    if (projectId === 11) {
+      return {
+        title: 'Data Talent Intelligence Platform',
+        sections: [
+          {
+            title: '🎯 Overview',
+            content: 'End-to-end intelligence platform for data-related jobs. Integrates an automated ETL pipeline, NLP skill extraction, and advanced analytics to aggregate and recommend roles.'
+          },
+          {
+            title: '🔄 Data Engineering & ETL',
+            items: [
+              'Built an automated ETL process orchestrated by Apache Airflow',
+              'Scraped and ingested live job postings using Selenium',
+              'Designed a robust Data Warehouse structured as a Star Schema for analytical querying'
+            ]
+          },
+          {
+            title: '🧠 NLP & Machine Learning',
+            items: [
+              'Implemented NLP models to extract and normalize technical skills from unstructured job descriptions',
+              'Developed a recommendation engine to match candidates with data roles'
+            ]
+          },
+          {
+            title: '📊 Analytics & Power BI',
+            items: [
+              'Created advanced DAX measures to analyze job market trends, salary distributions, and skill demands',
+              'Delivered an interactive Power BI dashboard for comprehensive talent intelligence insights'
+            ]
+          },
+          {
+            title: '💻 Application Layer',
+            items: [
+              'FastAPI backend to securely serve data and recommendations',
+              'Modern Next.js frontend to aggregate and visually display job postings'
+            ]
+          },
+          {
+            title: '⚙️ Tech Stack',
+            content: 'FastAPI • Airflow • NLP • Selenium • Next.js • SQL • Star Schema • Power BI • DAX'
+          }
+        ]
+      };
+    }
+
     if (projectId === 10) {
       return {
         title: 'Olist E-Commerce Review Score Root Cause Analysis',
@@ -756,7 +982,7 @@ export const ProjectsPage: React.FC = () => {
               <div className="project-overlay">
                 <div className="overlay-line"></div>
                 <div className="overlay-left">
-                  <button 
+                  <button
                     className="overlay-btn video-btn"
                     onClick={() => {
                       if (project.mediaItems) {
@@ -776,9 +1002,9 @@ export const ProjectsPage: React.FC = () => {
                   </button>
                 </div>
                 <div className="overlay-right">
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="overlay-btn code-btn"
                     title="View Code on GitHub"
@@ -791,7 +1017,13 @@ export const ProjectsPage: React.FC = () => {
 
               <div className="project-content-page">
                 <div className="project-meta">
-                  <span className="project-category">{project.category}</span>
+                  <div className="project-categories">
+                    {project.categories.map((cat) => (
+                      <span key={cat} className="project-category" style={{ marginRight: '8px' }}>
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
                   <span className="project-profile">{project.profile}</span>
                 </div>
                 <span className="project-date">{project.date}</span>
@@ -804,7 +1036,7 @@ export const ProjectsPage: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <button 
+                <button
                   onClick={() => setSelectedProjectId(project.id)}
                   className="project-link-btn"
                   style={{ cursor: 'pointer' }}
@@ -897,7 +1129,7 @@ export const ProjectsPage: React.FC = () => {
               <FaTimes size={28} />
             </button>
             <div className="video-container">
-              <video 
+              <video
                 width="100%"
                 height="100%"
                 controls
@@ -930,8 +1162,8 @@ export const ProjectsPage: React.FC = () => {
               <FaTimes size={28} />
             </button>
             <div className="image-carousel-container">
-              <img 
-                src={selectedImages[currentImageIndex]} 
+              <img
+                src={selectedImages[currentImageIndex]}
                 alt={`Screenshot ${currentImageIndex + 1}`}
                 className="carousel-image"
               />

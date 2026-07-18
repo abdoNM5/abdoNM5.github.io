@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
       <nav className={`sect ${isOpen ? 'active' : ''}`}>
         <ul>
           <li><a href="/#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
-          <li><Link to="/education" onClick={() => setIsOpen(false)}>Education</Link></li>
+          <li><Link to="/education" onClick={() => setIsOpen(false)}>Education & Experience</Link></li>
           <li><a href="/#about" onClick={() => setIsOpen(false)}>About & Skills</a></li>
           <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects Lab</Link></li>
         </ul>
